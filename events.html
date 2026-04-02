@@ -237,14 +237,33 @@
         </form>
       </div>
 
-      <!-- Success View (Hidden by default) -->
-      <div id="registration-success-view" style="display: none; text-align: center; padding: 2rem 0;">
-        <div style="width: 100px; height: 100px; background: rgba(16, 185, 129, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem; border: 2px solid #10b981; animation: scaleUp 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);">
-          <i class="ph-fill ph-check" style="font-size: 3.5rem; color: #10b981;"></i>
+      <!-- Success View (Professionally Restructured) -->
+      <div id="registration-success-view" style="display: none; text-align: center;">
+        <div style="width: 80px; height: 80px; background: rgba(16, 185, 129, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; border: 1px solid rgba(16, 185, 129, 0.3); animation: scaleUp 0.6s ease-out;">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12" style="stroke-dasharray: 50; stroke-dashoffset: 50; animation: drawCheck 0.5s ease-out forwards 0.3s;"></polyline>
+          </svg>
         </div>
-        <h2 style="margin-bottom: 1rem;">You're Registered! 🎉</h2>
-        <p style="color: var(--text-muted); margin-bottom: 2.5rem; line-height: 1.6;">Welcome to the competition. We've sent a confirmation email with all the details and next steps to your inbox.</p>
-        <button class="btn btn-primary" id="success-done-btn" style="width: 100%; justify-content: center;">Awesome, Let's Go!</button>
+        
+        <h2 style="font-size: 2rem; margin-bottom: 0.5rem;">Registration <span class="gradient-text">Confirmed</span></h2>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">Welcome aboard! Your spot in the hackathon is now secured.</p>
+        
+        <div class="success-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted);">Registration ID</span>
+            <span class="registration-id" id="display-reg-id">#HF-83921</span>
+          </div>
+          <div style="border-top: 1px dashed var(--glass-border); padding-top: 1rem;">
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;"><i class="ph-fill ph-info" style="color: var(--primary);"></i> Next Steps:</p>
+            <ul style="list-style: none; text-align: left; font-size: 0.9rem; display: grid; gap: 0.5rem; padding-left: 0.5rem;">
+              <li><i class="ph ph-check-circle" style="color: #10b981;"></i> Join the Discord community</li>
+              <li><i class="ph ph-check-circle" style="color: #10b981;"></i> Complete your hacker profile</li>
+              <li><i class="ph ph-check-circle" style="color: #10b981;"></i> Start matching with teammates</li>
+            </ul>
+          </div>
+        </div>
+
+        <button class="btn btn-primary" id="success-done-btn" style="width: 100%; justify-content: center; height: 50px; font-weight: 600;">Go to Dashboard</button>
       </div>
     </div>
   </div>

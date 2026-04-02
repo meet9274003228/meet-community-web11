@@ -279,6 +279,11 @@ if (regModal && openRegBtns.length > 0) {
       
       // Mock API Call
       setTimeout(() => {
+        // Generate random ID
+        const regId = 'HF-' + Math.floor(10000 + Math.random() * 90000);
+        const idDisplay = document.getElementById('display-reg-id');
+        if (idDisplay) idDisplay.textContent = `#${regId}`;
+
         // Show Success View
         document.getElementById('registration-form-view').style.display = 'none';
         document.getElementById('registration-success-view').style.display = 'block';
@@ -290,7 +295,6 @@ if (regModal && openRegBtns.length > 0) {
         openRegBtns.forEach(btn => {
           if (btn.getAttribute('data-event') === eventName) {
             btn.innerHTML = '<i class="ph ph-check"></i> Registered';
-            btn.classList.add('btn-success'); // Assuming we add a success class or just style it
             btn.disabled = true;
             btn.style.background = '#10b981';
             btn.style.borderColor = '#10b981';
@@ -315,28 +319,33 @@ function createConfetti() {
   
   if (!container) return;
 
-  for (let i = 0; i < 50; i++) {
+  for (let i = 0; i < 35; i++) {
     const confetti = document.createElement('div');
     confetti.className = 'confetti';
-    confetti.style.left = Math.random() * 100 + '%';
-    confetti.style.top = Math.random() * 100 + '%';
+    confetti.style.left = '50%';
+    confetti.style.top = '40%';
     confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
     confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
     
     container.appendChild(confetti);
     
-    // Animate
-    const velocityX = (Math.random() - 0.5) * 10;
-    const velocityY = (Math.random() - 0.5) * 10;
+    // Animate outwards from center
+    const angle = Math.random() * Math.PI * 2;
+    const velocity = 2 + Math.random() * 8;
+    const vx = Math.cos(angle) * velocity;
+    const vy = Math.sin(angle) * velocity;
+    
+    let x = 50;
+    let y = 40;
     let opacity = 1;
     
     const animation = setInterval(() => {
-      const currentTop = parseFloat(confetti.style.top);
-      const currentLeft = parseFloat(confetti.style.left);
+      x += vx * 0.5;
+      y += vy * 0.5;
+      opacity -= 0.015;
       
-      confetti.style.top = (currentTop + velocityY) + '%';
-      confetti.style.left = (currentLeft + velocityX) + '%';
-      opacity -= 0.02;
+      confetti.style.left = x + '%';
+      confetti.style.top = y + '%';
       confetti.style.opacity = opacity;
       
       if (opacity <= 0) {
