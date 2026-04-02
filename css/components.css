@@ -48,6 +48,17 @@
   font-size: 1.8rem;
   font-weight: 900;
   letter-spacing: -1px;
+  text-decoration: none;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: var(--transition);
+}
+
+.nav-brand:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
 }
 
 .nav-links {
