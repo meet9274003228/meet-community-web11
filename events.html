@@ -27,7 +27,28 @@
   <header class="section" style="padding-top: 150px; padding-bottom: 2rem; text-align: center;">
     <div class="container reveal">
       <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">Discover <span class="gradient-text">Hackathons</span></h1>
-      <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Find the perfect hackathon to showcase your skills, learn new technologies, and win amazing prizes.</p>
+      <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto 3rem auto;">Find the perfect hackathon to showcase your skills, learn new technologies, and win amazing prizes.</p>
+      
+      <!-- Countdown Timer -->
+      <h3 style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 2px;">Next Major Event Starts In</h3>
+      <div id="countdown" style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+        <div style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3); padding: 1.5rem; border-radius: 15px; min-width: 120px; box-shadow: 0 0 20px rgba(139, 92, 246, 0.1);">
+          <h2 id="cd-days" style="font-size: 3rem; color: var(--primary); font-family: monospace; line-height: 1;">00</h2>
+          <p style="color: var(--text-muted); font-size: 0.9rem; text-transform: uppercase; font-weight: bold; margin-top: 5px;">Days</p>
+        </div>
+        <div style="background: rgba(236, 72, 153, 0.1); border: 1px solid rgba(236, 72, 153, 0.3); padding: 1.5rem; border-radius: 15px; min-width: 120px; box-shadow: 0 0 20px rgba(236, 72, 153, 0.1);">
+          <h2 id="cd-hours" style="font-size: 3rem; color: var(--secondary); font-family: monospace; line-height: 1;">00</h2>
+          <p style="color: var(--text-muted); font-size: 0.9rem; text-transform: uppercase; font-weight: bold; margin-top: 5px;">Hours</p>
+        </div>
+        <div style="background: rgba(14, 165, 233, 0.1); border: 1px solid rgba(14, 165, 233, 0.3); padding: 1.5rem; border-radius: 15px; min-width: 120px; box-shadow: 0 0 20px rgba(14, 165, 233, 0.1);">
+          <h2 id="cd-mins" style="font-size: 3rem; color: var(--accent); font-family: monospace; line-height: 1;">00</h2>
+          <p style="color: var(--text-muted); font-size: 0.9rem; text-transform: uppercase; font-weight: bold; margin-top: 5px;">Mins</p>
+        </div>
+        <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); padding: 1.5rem; border-radius: 15px; min-width: 120px; box-shadow: 0 0 20px rgba(16, 185, 129, 0.1);">
+          <h2 id="cd-secs" style="font-size: 3rem; color: #10b981; font-family: monospace; line-height: 1;">00</h2>
+          <p style="color: var(--text-muted); font-size: 0.9rem; text-transform: uppercase; font-weight: bold; margin-top: 5px;">Secs</p>
+        </div>
+      </div>
     </div>
   </header>
 
