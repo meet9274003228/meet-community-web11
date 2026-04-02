@@ -104,15 +104,6 @@ if (cdDays && cdHours && cdMins && cdSecs) {
 // Theme Toggle Logic
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.documentElement;
-const themeIcon = themeToggle?.querySelector('i');
-
-const currentTheme = localStorage.getItem('theme') || 'dark';
-if (currentTheme === 'light') {
-  body.setAttribute('data-theme', 'light');
-  if (themeIcon) {
-    themeIcon.classList.replace('ph-moon', 'ph-sun');
-  }
-}
 
 if (themeToggle) {
   themeToggle.addEventListener('click', () => {
@@ -120,11 +111,9 @@ if (themeToggle) {
     if (isDark) {
       body.setAttribute('data-theme', 'light');
       localStorage.setItem('theme', 'light');
-      themeIcon.classList.replace('ph-moon', 'ph-sun');
     } else {
       body.removeAttribute('data-theme');
       localStorage.setItem('theme', 'dark');
-      themeIcon.classList.replace('ph-sun', 'ph-moon');
     }
   });
 }
