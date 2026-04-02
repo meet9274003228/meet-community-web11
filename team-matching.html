@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HackForge | Find a Team</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+  <nav class="navbar scrolled">
+    <div class="container">
+      <div class="nav-brand"><i class="ph-fill ph-code" style="color: var(--primary); margin-right: 5px; vertical-align: middle;"></i>Hack<span class="gradient-text">Forge</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="events.html" class="nav-link">Hackathons</a></li>
+        <li><a href="team-matching.html" class="nav-link" style="color: var(--text-main);">Team Matching</a></li>
+        <li><a href="leaderboard.html" class="nav-link">Leaderboard</a></li>
+        <li><a href="mentors.html" class="nav-link">Mentors</a></li>
+      </ul>
+      <div class="nav-cta"><a href="#" class="btn btn-primary">Join Discord</a></div>
+    </div>
+  </nav>
+
+  <header class="section" style="padding-top: 150px; padding-bottom: 2rem; text-align: center;">
+    <div class="container reveal">
+      <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">Find Your <span class="gradient-text">Dream Team</span></h1>
+      <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Looking for a designer, an AI expert, or a frontend wizard? Connect with brilliant minds looking for a team.</p>
+    </div>
+  </header>
+
+  <section class="section" style="padding-top: 2rem;">
+    <div class="container">
+      <div class="reveal" style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 3rem; flex-wrap: wrap;">
+        <button class="btn btn-primary" style="border-radius: 30px;">All Roles</button>
+        <button class="btn btn-outline" style="border-radius: 30px;">Frontend</button>
+        <button class="btn btn-outline" style="border-radius: 30px;">Backend</button>
+        <button class="btn btn-outline" style="border-radius: 30px;">Design</button>
+        <button class="btn btn-outline" style="border-radius: 30px;">AI/ML</button>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+        
+        <div class="glass-panel reveal" style="padding: 2rem; text-align: center;">
+          <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--secondary)); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2rem; font-weight: bold;">SK</div>
+          <h3 style="font-size: 1.2rem; margin-bottom: 0.2rem;">Sarah Kline</h3>
+          <p style="color: var(--accent); font-size: 0.9rem; margin-bottom: 1rem;">Frontend Developer</p>
+          <div style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.5rem;">
+            <span style="background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); padding: 0.2rem 0.6rem; border-radius: 20px; font-size: 0.8rem;">React</span>
+            <span style="background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); padding: 0.2rem 0.6rem; border-radius: 20px; font-size: 0.8rem;">CSS Animations</span>
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Looking for a backend dev and designer to build a Web3 hack.</p>
+          <a href="#" class="btn btn-primary" style="width: 100%;">Connect <i class="ph ph-paper-plane-right"></i></a>
+        </div>
+
+        <div class="glass-panel reveal" style="padding: 2rem; text-align: center; transition-delay: 0.1s;">
+          <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), #10b981); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2rem; font-weight: bold;">RJ</div>
+          <h3 style="font-size: 1.2rem; margin-bottom: 0.2rem;">Rahul Jain</h3>
+          <p style="color: var(--accent); font-size: 0.9rem; margin-bottom: 1rem;">AI / ML Engineer</p>
+          <div style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.5rem;">
+            <span style="background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); padding: 0.2rem 0.6rem; border-radius: 20px; font-size: 0.8rem;">Python</span>
+            <span style="background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); padding: 0.2rem 0.6rem; border-radius: 20px; font-size: 0.8rem;">PyTorch</span>
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">I build intelligent agents. Need a solid frontend to showcase them.</p>
+          <a href="#" class="btn btn-primary" style="width: 100%;">Connect <i class="ph ph-paper-plane-right"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <script src="js/main.js"></script>
+</body>
+</html>

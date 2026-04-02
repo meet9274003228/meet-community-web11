@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HackForge | Leaderboard</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+  <nav class="navbar scrolled">
+    <div class="container">
+      <div class="nav-brand"><i class="ph-fill ph-code" style="color: var(--primary); margin-right: 5px; vertical-align: middle;"></i>Hack<span class="gradient-text">Forge</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="events.html" class="nav-link">Hackathons</a></li>
+        <li><a href="projects.html" class="nav-link">Gallery</a></li>
+        <li><a href="leaderboard.html" class="nav-link" style="color: var(--text-main);">Leaderboard</a></li>
+        <li><a href="resources.html" class="nav-link">Resources</a></li>
+      </ul>
+      <div class="nav-cta"><a href="#" class="btn btn-primary">Join Discord</a></div>
+    </div>
+  </nav>
+
+  <header class="section" style="padding-top: 150px; padding-bottom: 2rem; text-align: center;">
+    <div class="container reveal">
+      <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">Global <span class="gradient-text">Leaderboard</span></h1>
+      <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Ship projects, earn badges, and climb the ranks of top developers in the community.</p>
+    </div>
+  </header>
+
+  <section class="section" style="padding-top: 2rem;">
+    <div class="container">
+      <div class="glass-panel reveal" style="overflow: hidden; padding: 0;">
+        <table style="width: 100%; border-collapse: collapse; text-align: left;">
+          <thead>
+            <tr style="background: rgba(255,255,255,0.05); border-bottom: 1px solid var(--glass-border);">
+              <th style="padding: 1.5rem; color: var(--text-muted); font-weight: 500;">Rank</th>
+              <th style="padding: 1.5rem; color: var(--text-muted); font-weight: 500;">Hacker</th>
+              <th style="padding: 1.5rem; color: var(--text-muted); font-weight: 500;">Points</th>
+              <th style="padding: 1.5rem; color: var(--text-muted); font-weight: 500;">Badges</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--glass-border); transition: background 0.3s ease;">
+              <td style="padding: 1.5rem;"><span style="font-size: 1.5rem; font-weight: bold; color: #fbbf24;">#1</span></td>
+              <td style="padding: 1.5rem; display: flex; align-items: center; gap: 1rem;">
+                <div style="width: 45px; height: 45px; border-radius: 50%; background: linear-gradient(135deg, var(--secondary), var(--primary)); display: flex; align-items: center; justify-content: center; font-weight: bold;">JD</div>
+                <div>
+                  <div style="font-weight: 600; font-size: 1.1rem;">Jane Doe</div>
+                  <div style="color: var(--text-muted); font-size: 0.9rem;">Full Stack Developer</div>
+                </div>
+              </td>
+              <td style="padding: 1.5rem; font-weight: 600; font-size: 1.2rem; color: var(--accent);">24,500</td>
+              <td style="padding: 1.5rem; display: flex; gap: 0.5rem;">
+                <i class="ph-fill ph-trophy" style="color: #fbbf24; font-size: 1.5rem;"></i>
+                <i class="ph-fill ph-medal" style="color: var(--primary); font-size: 1.5rem;"></i>
+              </td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--glass-border); transition: background 0.3s ease;">
+              <td style="padding: 1.5rem;"><span style="font-size: 1.5rem; font-weight: bold; color: #94a3b8;">#2</span></td>
+              <td style="padding: 1.5rem; display: flex; align-items: center; gap: 1rem;">
+                <div style="width: 45px; height: 45px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--accent)); display: flex; align-items: center; justify-content: center; font-weight: bold;">MC</div>
+                <div>
+                  <div style="font-weight: 600; font-size: 1.1rem;">Mark Chen</div>
+                  <div style="color: var(--text-muted); font-size: 0.9rem;">Blockchain Engineer</div>
+                </div>
+              </td>
+              <td style="padding: 1.5rem; font-weight: 600; font-size: 1.2rem; color: var(--accent);">21,200</td>
+              <td style="padding: 1.5rem; display: flex; gap: 0.5rem;">
+                <i class="ph-fill ph-medal" style="color: var(--primary); font-size: 1.5rem;"></i>
+              </td>
+            </tr>
+            <tr style="transition: background 0.3s ease;">
+              <td style="padding: 1.5rem;"><span style="font-size: 1.5rem; font-weight: bold; color: #b45309;">#3</span></td>
+              <td style="padding: 1.5rem; display: flex; align-items: center; gap: 1rem;">
+                <div style="width: 45px; height: 45px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), #10b981); display: flex; align-items: center; justify-content: center; font-weight: bold;">AS</div>
+                <div>
+                  <div style="font-weight: 600; font-size: 1.1rem;">Alex Smith</div>
+                  <div style="color: var(--text-muted); font-size: 0.9rem;">AI Researcher</div>
+                </div>
+              </td>
+              <td style="padding: 1.5rem; font-weight: 600; font-size: 1.2rem; color: var(--accent);">19,800</td>
+              <td style="padding: 1.5rem; display: flex; gap: 0.5rem;">
+                <i class="ph-fill ph-star" style="color: #fbbf24; font-size: 1.5rem;"></i>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  <script src="js/main.js"></script>
+</body>
+</html>

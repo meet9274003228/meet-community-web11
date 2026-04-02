@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HackForge | Project Gallery</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+  <nav class="navbar scrolled">
+    <div class="container">
+      <div class="nav-brand"><i class="ph-fill ph-code" style="color: var(--primary); margin-right: 5px; vertical-align: middle;"></i>Hack<span class="gradient-text">Forge</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="events.html" class="nav-link">Hackathons</a></li>
+        <li><a href="projects.html" class="nav-link" style="color: var(--text-main);">Gallery</a></li>
+        <li><a href="leaderboard.html" class="nav-link">Leaderboard</a></li>
+        <li><a href="resources.html" class="nav-link">Resources</a></li>
+      </ul>
+      <div class="nav-cta"><a href="#" class="btn btn-primary">Join Discord</a></div>
+    </div>
+  </nav>
+
+  <header class="section" style="padding-top: 150px; padding-bottom: 2rem; text-align: center;">
+    <div class="container reveal">
+      <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">Project <span class="gradient-text">Gallery</span></h1>
+      <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Explore award-winning hacks from our community. Get inspired for your next big build.</p>
+    </div>
+  </header>
+
+  <section class="section" style="padding-top: 2rem;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+        <!-- Project 1 -->
+        <div class="glass-panel reveal" style="overflow: hidden; padding: 0;">
+          <div style="height: 220px; background: linear-gradient(135deg, var(--primary), var(--bg-surface)); display: flex; align-items: center; justify-content: center;">
+            <i class="ph-duotone ph-robot" style="font-size: 5rem; color: white;"></i>
+          </div>
+          <div style="padding: 1.5rem;">
+            <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">AutoDev Agent</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem;">An AI pair programmer that actually works. Winner of LA Hacks 2026.</p>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
+              <span style="background: rgba(255,255,255,0.1); padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;">Python</span>
+              <span style="background: rgba(255,255,255,0.1); padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;">React</span>
+              <span style="background: rgba(255,255,255,0.1); padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;">OpenAI</span>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--glass-border); padding-top: 1rem;">
+              <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <div style="width: 30px; height: 30px; border-radius: 50%; background: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: bold;">AS</div>
+                <span style="font-size: 0.9rem; color: var(--text-muted);">Alex Smith + 2 others</span>
+              </div>
+              <a href="#" style="color: var(--primary);"><i class="ph-fill ph-arrow-square-out" style="font-size: 1.2rem;"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="js/main.js"></script>
+</body>
+</html>
