@@ -1,0 +1,12 @@
+{
+  "name": "community-website",
+  "version": "1.0.0",
+  "description": "Hackathon community website",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'Static site, no build needed!'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
