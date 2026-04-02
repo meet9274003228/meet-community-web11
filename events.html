@@ -85,15 +85,15 @@
   <section class="section" style="padding-top: 2rem;">
     <div class="container">
       <div class="reveal" style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 3rem; flex-wrap: wrap;">
-        <button class="btn btn-primary" style="border-radius: 30px;">All Events</button>
-        <button class="btn btn-outline" style="border-radius: 30px;">Live</button>
-        <button class="btn btn-outline" style="border-radius: 30px;">Upcoming</button>
-        <button class="btn btn-outline" style="border-radius: 30px;">Past</button>
+        <button class="btn btn-primary filter-btn active" data-filter="all" style="border-radius: 30px;">All Events</button>
+        <button class="btn btn-outline filter-btn" data-filter="live" style="border-radius: 30px;">Live</button>
+        <button class="btn btn-outline filter-btn" data-filter="upcoming" style="border-radius: 30px;">Upcoming</button>
+        <button class="btn btn-outline filter-btn" data-filter="past" style="border-radius: 30px;">Past</button>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+      <div id="events-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
         <!-- Card 1 -->
-        <div class="glass-panel reveal" style="padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
+        <div class="glass-panel reveal event-card" data-category="live" style="padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
           <div style="height: 180px; background: linear-gradient(45deg, #1e293b, #0f172a); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
             <i class="ph-duotone ph-currency-eth" style="font-size: 4rem; color: var(--accent);"></i>
           </div>
@@ -106,7 +106,7 @@
           <a href="#" class="btn btn-outline" style="width: 100%; margin-top: 1rem; border-color: var(--secondary); color: var(--secondary);">Join Late</a>
         </div>
         <!-- Card 2 -->
-        <div class="glass-panel reveal" style="padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; transition-delay: 0.1s;">
+        <div class="glass-panel reveal event-card" data-category="upcoming" style="padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; transition-delay: 0.1s;">
           <div style="height: 180px; background: linear-gradient(45deg, #1e293b, #0f172a); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
             <i class="ph-duotone ph-rocket" style="font-size: 4rem; color: var(--primary);"></i>
           </div>
@@ -119,7 +119,7 @@
           <a href="#" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Register Now</a>
         </div>
         <!-- Card 3 -->
-        <div class="glass-panel reveal" style="padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; transition-delay: 0.2s;">
+        <div class="glass-panel reveal event-card" data-category="upcoming" style="padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; transition-delay: 0.2s;">
           <div style="height: 180px; background: linear-gradient(45deg, #1e293b, #0f172a); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
             <i class="ph-duotone ph-leaf" style="font-size: 4rem; color: #10b981;"></i>
           </div>
@@ -131,6 +131,49 @@
           <p style="color: var(--text-muted); font-size: 0.95rem; flex-grow: 1;">Tech solutions for climate change.</p>
           <a href="#" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Register Now</a>
         </div>
+        
+        <!-- NEW CARD: Upcoming 4 -->
+        <div class="glass-panel reveal event-card" data-category="upcoming" style="padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
+          <div style="height: 180px; background: linear-gradient(45deg, #1e293b, #0f172a); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+            <i class="ph-duotone ph-fingerprint" style="font-size: 4rem; color: #f59e0b;"></i>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span class="badge badge-upcoming">Upcoming</span>
+            <span style="color: var(--text-muted); font-size: 0.9rem;"><i class="ph ph-calendar"></i> Dec 01-03</span>
+          </div>
+          <h3 style="font-size: 1.5rem;">CyberGuard Security</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem; flex-grow: 1;">Protect the digital world by solving intense security challenges.</p>
+          <a href="#" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Coming Soon</a>
+        </div>
+
+        <!-- NEW CARD: Past 1 -->
+        <div class="glass-panel reveal event-card" data-category="past" style="padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
+          <div style="height: 180px; background: rgba(0,0,0,0.3); border-radius: 12px; display: flex; align-items: center; justify-content: center; opacity: 0.8;">
+            <i class="ph-duotone ph-cloud" style="font-size: 4rem; color: #64748b;"></i>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span class="badge" style="background: rgba(100, 116, 139, 0.15); color: #94a3b8; border: 1px solid rgba(100, 116, 139, 0.3);">Ended (2025)</span>
+            <span style="color: var(--text-muted); font-size: 0.9rem;"><i class="ph ph- کاربران"></i> 1,200 Participants</span>
+          </div>
+          <h3 style="font-size: 1.5rem; opacity: 0.8;">DefHacks Winter 2025</h3>
+          <p style="color: var(--text-muted); font-size: 0.85rem; flex-grow: 1;">Our biggest winter hackathon yet. Check out the project gallery!</p>
+          <a href="projects.html" class="btn btn-outline" style="width: 100%; margin-top: 1rem;">View Results</a>
+        </div>
+
+        <!-- NEW CARD: Past 2 -->
+        <div class="glass-panel reveal event-card" data-category="past" style="padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
+          <div style="height: 180px; background: rgba(0,0,0,0.3); border-radius: 12px; display: flex; align-items: center; justify-content: center; opacity: 0.8;">
+            <i class="ph-duotone ph-device-mobile" style="font-size: 4rem; color: #64748b;"></i>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span class="badge" style="background: rgba(100, 116, 139, 0.15); color: #94a3b8; border: 1px solid rgba(100, 116, 139, 0.3);">Ended (2024)</span>
+            <span style="color: var(--text-muted); font-size: 0.9rem;"><i class="ph ph- کاربران"></i> 800 Participants</span>
+          </div>
+          <h3 style="font-size: 1.5rem; opacity: 0.8;">App Derby: Mobile First</h3>
+          <p style="color: var(--text-muted); font-size: 0.85rem; flex-grow: 1;">Winning apps are now live on major app stores.</p>
+          <a href="projects.html" class="btn btn-outline" style="width: 100%; margin-top: 1rem;">View Gallery</a>
+        </div>
+
       </div>
     </div>
   </section>

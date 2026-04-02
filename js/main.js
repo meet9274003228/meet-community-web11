@@ -196,12 +196,53 @@ if (searchInput) {
   });
 }
 
+// Event Filtering Logic
+const filterButtons = document.querySelectorAll('.filter-btn');
+const eventCards = document.querySelectorAll('.event-card');
+
+if (filterButtons.length > 0 && eventCards.length > 0) {
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.getAttribute('data-filter');
+      
+      // Update buttons
+      filterButtons.forEach(b => {
+        b.classList.remove('btn-primary');
+        b.classList.add('btn-outline');
+      });
+      btn.classList.remove('btn-outline');
+      btn.classList.add('btn-primary');
+      
+      // Filter cards
+      eventCards.forEach(card => {
+        const category = card.getAttribute('data-category');
+        if (filter === 'all' || filter === category) {
+          card.style.display = 'flex';
+          setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          }, 10);
+        } else {
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(20px)';
+          setTimeout(() => {
+            card.style.display = 'none';
+          }, 300);
+        }
+      });
+    });
+  });
+}
+
 // Spin animation for loading state
 const style = document.createElement('style');
 style.textContent = `
   @keyframes spin {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
+  }
+  .event-card {
+    transition: opacity 0.3s ease, transform 0.3s ease;
   }
 `;
 document.head.appendChild(style);
