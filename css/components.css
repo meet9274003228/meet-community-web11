@@ -130,3 +130,29 @@
   color: var(--primary);
   border: 1px solid rgba(139, 92, 246, 0.3);
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .navbar .container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+  .nav-brand {
+    font-size: 1.5rem;
+  }
+  .nav-cta a.btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 15px;
+    flex-wrap: wrap;
+  }
+  .nav-link {
+    font-size: 0.85rem;
+  }
+}
